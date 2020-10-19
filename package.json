@@ -10,6 +10,11 @@
     "deploy": "vercel",
     "codegen": "graphql-codegen --config codegen.js"
   },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true
+  },  
   "dependencies": {
     "@apollo/client": "^3.0.2",
     "@nexus/schema": "^0.16.0",
@@ -24,6 +29,7 @@
   "devDependencies": {
     "@graphql-codegen/add": "^2.0.1",
     "@graphql-codegen/cli": "1.18.0",
+    "@graphql-codegen/import-types-preset": "^1.18.0",
     "@graphql-codegen/introspection": "1.18.0",
     "@graphql-codegen/named-operations-object": "^1.17.8",
     "@graphql-codegen/typescript": "1.17.11",
@@ -33,6 +39,7 @@
     "@types/react": "^16.9.53",
     "graphql-codegen-apollo-next-ssr": "^0.0.16",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
     "typescript": "^4.0.3",
     "vercel": "^20.1.2"
   }

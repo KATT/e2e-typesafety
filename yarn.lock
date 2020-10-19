@@ -1123,6 +1123,16 @@
     "@graphql-tools/utils" "^6.0.18"
     tslib "~2.0.0"
 
+"@graphql-codegen/import-types-preset@^1.18.0":
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/import-types-preset/-/import-types-preset-1.18.0.tgz#09422a3e9561b997ecd6a2975d7697eb14a4a1c0"
+  integrity sha512-KVcRPExiZZmLKV2LTDG7xUVmqYZTo6C0z+/bX6872xPe2DIS1IgbMIFgSnT+TwS8fTuRJ6W5ABVtTqqsjDaeQw==
+  dependencies:
+    "@graphql-codegen/add" "^2.0.1"
+    "@graphql-codegen/plugin-helpers" "^1.17.8"
+    "@graphql-codegen/visitor-plugin-common" "^1.17.16"
+    tslib "~2.0.1"
+
 "@graphql-codegen/introspection@1.18.0":
   version "1.18.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.18.0.tgz#68d5b29d5ee3229510a5f1c382d1046a40d87dc7"
@@ -6078,6 +6088,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+prettier@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
+  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
