@@ -12,16 +12,13 @@ module.exports = {
             content: '/* eslint-disable */',
           },
         },
+        'graphql-codegen-apollo-next-ssr',
       ],
       config: {
-        skipTypename: true,
         withHooks: true,
         withHOC: false,
         withComponent: false,
-        // nonOptionalTypename: false,
-        scalars: {
-          _text: 'string[]',
-        },
+        reactApolloVersion: 3,
       },
     },
     './apollo/__generated__/graphql.schema.json': {
