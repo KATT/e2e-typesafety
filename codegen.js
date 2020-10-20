@@ -1,32 +1,36 @@
 module.exports = {
-  schema: './__generated__/schema.graphql',
   overwrite: true,
+  schema: './__generated__/schema.graphql',
+  documents: 'pages/**/*.{graphql,tsx,ts}',
   generates: {
-    './apollo/__generated__/graphql.tsx': {
-      documents: ['./pages/**/*.{graphql,gql,tsx}'],
+    'apollo/__generated__/graphql.tsx': {
       plugins: [
         'typescript',
         'typescript-operations',
-        {
-          add: {
-            content: '/* eslint-disable */',
-          },
-        },
+        'typescript-react-apollo',
       ],
       config: {
-        skipTypename: true,
-        withHooks: true,
+        reactApolloVersion: 3,
+        withHooks: false,
         withHOC: false,
         withComponent: false,
-        // nonOptionalTypename: false,
-        scalars: {
-          _text: 'string[]',
-        },
+        exportFragmentSpreadSubTypes: true,
+        documentMode: 'graphQLTag',
       },
     },
-    './apollo/__generated__/graphql.schema.json': {
-      documents: ['./pages/**/*.{graphql,gql,tsx}'],
-      plugins: ['introspection'],
+    'apollo/__generated__/page.tsx': {
+      config: {
+        documentMode: 'external',
+        importDocumentNodeExternallyFrom: './graphql',
+        reactApolloVersion: 3,
+        withHooks: true,
+        apolloClientInstanceImport: '../withApollo',
+      },
+      preset: 'import-types',
+      presetConfig: {
+        typesPath: './graphql',
+      },
+      plugins: ['graphql-codegen-apollo-next-ssr'],
     },
   },
 };
